@@ -9,8 +9,8 @@ const Header = ({ isDarkMode }) => {
   return (
     <motion.div
       id="header"
-      className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pt-10 sm:pt-16"
-      // 👆 added top padding to push content slightly down
+      // 🟢 Added pt-28 for mobile & smaller screens only
+      className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 sm:pt-20 pt-40"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -49,7 +49,9 @@ const Header = ({ isDarkMode }) => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        I am a motivated and detail-oriented Computer Science graduate with a strong passion for web development and design. I’m dedicated to creating visually appealing, user-friendly, and responsive websites that provide great user experiences.
+        I am a motivated and detail-oriented Computer Science graduate with a strong passion
+        for web development and design. I’m dedicated to creating visually appealing,
+        user-friendly, and responsive websites that provide great user experiences.
       </motion.p>
 
       <motion.div
@@ -70,11 +72,7 @@ const Header = ({ isDarkMode }) => {
         >
           contact me{" "}
           <Image
-            src={
-              isDarkMode
-                ? assets.right_arrow_black
-                : assets.right_arrow_white
-            }
+            src={isDarkMode ? assets.right_arrow_black : assets.right_arrow_white}
             alt=""
             className="w-4"
           />
