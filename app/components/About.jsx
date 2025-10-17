@@ -15,8 +15,9 @@ const About = ({ isDarkMode }) => {
   return (
     <motion.div
       id="about"
-      className={`w-full px-[12%] py-10 scroll-mt-20 transition-colors duration-300
-        ${isDarkMode ? 'bg-neutral-900 text-gray-100' : 'bg-white text-gray-800'}`}
+      className={`w-full px-[8%] sm:px-[12%] py-10 sm:py-16 scroll-mt-20 transition-colors duration-300
+      ${isDarkMode ? 'bg-neutral-900 text-gray-100' : 'bg-white text-gray-800'} pt-40 sm:pt-20`}
+
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
